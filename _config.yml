@@ -1,12 +1,12 @@
 - name: watermelon
   description: A brand new default theme for Hexo.
-  link: https://github.com/hexojs/hexo-theme-landscape
-  preview: http://hexo.io/hexo-theme-landscape
+  link: https://github.com/shaunabanana/hexo-theme-watermelon
+  preview: https://shengchen.design
   tags:
     - dynamic
     - responsive
-    - widget
     - two_column
+    - monospace
 
   update_items:
     - project

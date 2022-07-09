@@ -4,6 +4,8 @@ A minimalistic [Hexo](http://hexo.io) theme for personal academic websites. Feat
 
 [Demo](https://shengchen.design)
 
+![screenshot](./screenshot.png)
+
 ## Summary
 
 - [General](#general)

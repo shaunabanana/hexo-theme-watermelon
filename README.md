@@ -4,15 +4,12 @@ A minimalistic [Hexo](http://hexo.io) theme for personal academic websites. Feat
 
 [Demo](https://shengchen.design)
 
-![screenshot](https://user-images.githubusercontent.com/2175271/137625287-24a4ac77-fbc9-4c99-a4cd-90455d93d13c.png)
-
 ## Summary
 
 - [General](#general)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Install](#install)
-- [Configuration](#configuration)
 - [License](#license)
 
 ## General

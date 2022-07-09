@@ -1,0 +1,28 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <meta name="description" content="">
+    <meta name="author" content="<%=config.author%>">
+    <link rel="icon" href="favicon/favicon.ico">
+
+    <title><%= config.title + (page.title ? ' | ' + page.title : '') %></title>
+
+    <%- css('styles/normalize.css') %>
+    <%- css('styles/fonts.css') %>
+    <%- css('styles/main.css') %>
+    <%- css('styles/avatar.css') %>
+    <%- css('styles/post.css') %>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6S44QJN8B"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z6S44QJN8B');
+    </script>
+</head>

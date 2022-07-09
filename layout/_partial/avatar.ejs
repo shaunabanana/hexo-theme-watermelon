@@ -1,0 +1,55 @@
+<div class="avatar">
+    <div class="element hair-back"></div>
+    <div class="element ear ear-left"></div>
+    <div class="element ear ear-right"></div>
+    <div class="element face"></div>
+
+    <div class="element hair-front"></div>
+    <div class="element hair-front-mask"></div>
+    <div class="element bangs"></div>
+
+    <div class="element brow-left"></div>
+    <div class="element brow-right"></div>
+
+    <div class="element eye-left"></div>
+    <div class="element eye-right"></div>
+
+    <div class="element glasses-leg-left"></div>
+    <div class="element glasses-leg-right"></div>
+    <div class="element glasses-nose"></div>
+    <div class="element glasses-left"></div>
+    <div class="element glasses-right"></div>
+
+    <script>
+        function look(e) {
+            let mouseX, mouseY;
+            if (e.clientX && e.clientY) {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            } else if (e.touches && e.touches.length > 0) {
+                mouseX = e.touches[0].clientX;
+                mouseY = e.touches[0].clientY;
+            }
+            let parsePx = (x) => Number.parseFloat(x.replace('px', ''));
+
+            let avatar = document.querySelector('.avatar');
+            let rect = avatar.getBoundingClientRect();
+            let centerX = (rect.left + rect.right) / 2;
+            let centerY = (rect.top + rect.bottom) / 2;
+
+            mouseX = typeof mouseX === 'number' ? mouseX : centerX;
+            mouseY = typeof mouseY === 'number' ? mouseY : centerY;
+
+            let lookX = (mouseX - centerX) / window.innerWidth * 15;
+            let lookY = (mouseY - centerY) / window.innerHeight * -10;
+
+            document.documentElement.style.setProperty('--look-x', lookX + "deg");
+            document.documentElement.style.setProperty('--look-y', lookY + "deg");
+            document.documentElement.style.setProperty('--eye-x', lookX * 1.3 + "px");
+            document.documentElement.style.setProperty('--eye-y', -lookY * 2 + "px");
+        }
+        window.addEventListener("mousemove", look);
+        window.addEventListener("touchmove", look);
+        window.addEventListener("touchstart", look);
+    </script>
+</div>

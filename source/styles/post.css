@@ -1,0 +1,103 @@
+.rendered {
+    display: none;
+}
+
+.footnotes, .footnotes-sep {
+    display: none;
+}
+
+.footnote {
+    margin-top: 0.2rem;
+}
+
+.footnotes-side {
+    color: gray;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    white-space: pre-wrap;
+    /* CSS3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
+
+    padding-top: 0.05rem;
+}
+
+.footnotes-bottom {
+    color: gray;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    margin-top: 2rem;
+}
+
+.post.header.left {
+    align-self: start;
+    justify-self: left;
+    text-align: right;
+    margin-right: 1.5rem;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    width: 100%;
+}
+
+.post.header.left span.nav-left {
+    justify-self: left;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.post.header.left span.nav-right {
+    justify-self: right;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.post.header.right {
+    margin-top: 2rem;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .post.header.left {
+        align-self: start;
+        justify-self: right;
+        margin-right: 1.5rem;
+        margin-top: 0.2em;
+        margin-bottom: 3rem;
+
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .post.header.left span.nav-left {
+        justify-self: right;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        margin-bottom: 1rem;
+    }
+    
+    .post.header.left span.nav-right {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .post.header.left span.nav-right a {
+        display: block;
+    }
+
+    .post.header.right {
+        align-self: end;
+        margin-top: 0px;
+        margin-bottom: 3rem;
+    }
+}

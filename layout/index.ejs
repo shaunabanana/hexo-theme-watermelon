@@ -1,0 +1,71 @@
+<div class="page">
+    <div class="header left">
+        <%- partial('_partial/avatar') %>
+    </div>
+    <div class="header right">
+        <h1><%= config.title %></h1>
+        <span>
+            <a href="/resume">RESUME</a> | 
+            <a href="https://github.com/shaunabanana">GITHUB</a> | 
+            <a href="https://twitter.com/shaaauuuuna">TWITTER</a> | 
+            <a rel="me" href="https://mastodon.online/@shaunabanana">MASTODON</a>
+        </span>
+        <br>
+        <span><%= config.description %></span>
+    </div>
+
+    <% site.posts.sort('date', 'desc') %>
+    <% site.posts.each(function(item, i){ %>
+        <% console.log(item.title, item.date) %>
+    <% }); %>
+    
+    <div class="updates left bold">
+        Updates <br>
+        <a id="subscribe" href="/atom.xml" style="font-weight: normal;">RSS</a>
+
+        <script>
+            document.querySelector("#subscribe").onclick = function () {
+                gtag('sign_up');
+            }
+        </script>
+    </div>
+    <div class="updates right">
+        <% let update_count = 1; %>
+        <% site.posts.sort('date', 'desc').each(function(item, i){ %>
+            <% if (update_count > 5) return; %>
+            <% if(theme[0].update_items.includes(item.layout)) { %>
+                <% update_count++; %>
+                <%- partial('_partial/article-excerpt', {item: item}) %>
+            <% } %>
+        <% }); %>
+    </div>
+
+    <div class="publication left bold">Publications</div>
+    <div class="publication right">
+        <% site.posts.sort('date', 'desc').each(function(item){ %>
+            <% if(item.layout === 'paper') { %>
+                <%- partial('_partial/paper-excerpt', {item: item}) %>
+            <% } %>
+        <% }); %>
+    </div>
+
+    <div class="projects left bold">Projects</div>
+    <div class="projects right">
+        <% site.posts.sort('date', 'desc').each(function(item){ %>
+            <% if(item.layout === 'project') { %>
+                <%- partial('_partial/project-excerpt', {item: item}) %>
+            <% } %>
+        <% }); %>
+    </div>
+
+    <div class="projects left bold">Blog posts</div>
+    <div class="projects right">
+        <% site.posts.sort('date', 'desc').each(function(item){ %>
+            <% if(item.layout === 'blog') { %>
+                <%- partial('_partial/blog-excerpt', {item: item}) %>
+            <% } %>
+        <% }); %>
+    </div>
+
+    <%- partial('_partial/footer') %>
+</div>

@@ -1,0 +1,21 @@
+<div class="post header left">
+    <span class="nav-left" id="nav-back">
+        <a href="javascript:history.back();">&larr; BACK</a><br>
+    </span>
+
+    <script>
+        if (document.referrer == "" || history.length == 0) {
+            document.querySelector('#nav-back a').href = "/";
+            document.querySelector('#nav-back a').innerHTML = "&larr; HOME";
+        } else {
+            document.querySelector('#nav-back a').href = "javascript:history.back();";
+            document.querySelector('#nav-back a').innerHTML = "&larr; BACK";
+        }
+    </script>
+    <!-- <span class="nav-right">
+        <a href="/about">ABOUT</a>
+        <a href="/blog">BLOG</a>
+        <a href="/projects">PROJECTS</a>
+        <a href="/publications">PUBLICATIONS</a>
+    </span> -->
+</div>

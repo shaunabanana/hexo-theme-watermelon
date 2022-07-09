@@ -1,5 +1,5 @@
 - name: watermelon
-  description: A brand new default theme for Hexo.
+  description: A minimalistic Hexo theme for personal academic websites.
   link: https://github.com/shaunabanana/hexo-theme-watermelon
   preview: https://shengchen.design
   tags:

@@ -1,6 +1,6 @@
 # Watermelon
 
-A minimalistic [Hexo](http://hexo.io) theme for my personal website. Features a two-column layout and monospace fonts.
+A minimalistic [Hexo](http://hexo.io) theme for personal academic websites. Features a two-column layout and monospace fonts.
 
 [Demo](https://shengchen.design)
 
